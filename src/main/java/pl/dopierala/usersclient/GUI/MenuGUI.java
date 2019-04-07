@@ -9,10 +9,12 @@ import com.vaadin.flow.router.Route;
 @Route("menu")
 public class MenuGUI extends VerticalLayout {
     private Button btnAdd = new Button("Add new user");
+    private Button btnRemove = new Button("Remove user");
 
 
     public MenuGUI() {
         btnAdd.addClickListener(c -> UI.getCurrent().navigate("addUser"));
+        btnRemove.addClickListener(c -> UI.getCurrent().navigate("removeUser"));
         add(btnAdd);
     }
 }
